@@ -1,5 +1,2 @@
-GET http://localhost:8080/symbol
+GET http://localhost:8080/stocks/WMT
 Content-type: application/json
-{
-"symbol": "WMT"
-}
