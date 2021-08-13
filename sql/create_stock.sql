@@ -1,4 +1,4 @@
-CREATE TABLE `conygre`.`portfolio` (
+CREATE TABLE `conygre`.`stocks` (
                                        `id` INT NOT NULL AUTO_INCREMENT,
                                        `symbol` VARCHAR(45) NOT NULL,
                                        `volume` INT NOT NULL,
