@@ -20,10 +20,16 @@ public class StockController {
         return stockService.getAllStocks();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/{symbol}")
+    public Stock getStockBySymbol(@PathVariable("symbol") String symbol) {
+        return  stockService.getStockBySymbol(symbol);
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public void addCd(@RequestBody Stock stock) {
         stockService.addNewStock(stock);
     }
+
 }
 
 
