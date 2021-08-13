@@ -15,7 +15,8 @@ public class Stock {
 
     @Column(name="volume")
     private Integer volume;
-    @Column(name="price");
+
+    @Column(name="price")
     private Double price;
 
     public Integer getId() {
