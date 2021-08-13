@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 public interface StockRepository extends JpaRepository<Stock, Integer> {
-    public Iterable<Stock> findBySymbol(@Param("symbol") String symobl);
+    public Iterable<Stock> findBySymbol(@Param("symbol") String symbol);
 }
