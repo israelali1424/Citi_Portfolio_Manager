@@ -6,7 +6,7 @@
 		<version>1.4.1.RELEASE</version>
 	</parent>
 	<groupId>com.conygre.training</groupId>
-	<artifactId>SpringBootExample</artifactId>
+	<artifactId>Portfolio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
