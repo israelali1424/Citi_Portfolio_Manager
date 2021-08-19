@@ -1,4 +1,4 @@
-def projectName = 'Citi_Portfolio_Manager'
+def projectName = 'citi_portfolio_manager'
 def version = "0.0.${currentBuild.number}"
 def dockerImageTag = "${projectName}:${version}"
 
