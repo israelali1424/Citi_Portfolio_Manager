@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-net-worth',
@@ -15,7 +15,10 @@ export class NetWorthComponent implements OnInit {
     {code:'GOOGL', price:142},
     {code:'FB', price:82},
     {code:'AAPL', price:11},
+    {code:'TSLA', price:30},
   ]
+
+  @Input() dataa:any
 
   constructor() { }
 
@@ -30,10 +33,10 @@ export class NetWorthComponent implements OnInit {
   // handleSellEvent(value:number){
   //   this.total -= value
   // }
+  // data looks like this [{"id":1,"symbol":"TSLA","volume":200,"price":719.43},{"id":2,"symbol":"AAPL","volume":500,"price":148.91},{"id":3,"symbol":"DIS","volume":1000,"price":142.34}] 
 
-
-  handleCodeChangeEvent(whichCode:any){
-    this.codes[whichCode['index']].code = whichCode['code']
+  handleCodeChangeEvent(whichSymbol:any){
+    this.dataa[whichSymbol['index']].symbol = whichSymbol['symbol']
   }
 
 }

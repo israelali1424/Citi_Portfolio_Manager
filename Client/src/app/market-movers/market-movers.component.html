@@ -1,8 +1,8 @@
-<section>
-  <p>market-movers works!</p>
+<section  [ngStyle]="{backgroundColor:'#253669', color: 'white', outline: 'none', boxShadow: 'none', border: 'none', margin: '-8px'}">
+  <h1>Gainers and Losers</h1>
   <!-- we can iterate over a collection such as an array -->
   <ul>
     <!-- *ngFor is sugar syntax for *ngForOf -->
-    <li *ngFor='let person of people'>{{person.f}} {{person.l}}</li>
+    <li *ngFor='let stock of changedStocks'>{{stock.ticker}} {{stock.delta}}</li>
   </ul>
 </section>

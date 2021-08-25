@@ -17,6 +17,13 @@ export class MarketMoversComponent implements OnInit {
     { f: 'Timnit', l: 'Gebru' },
     { f: 'Meng', l: 'Wanzhou' }
   ]
+
+  changedStocks = [
+    { ticker: 'APPL', delta: -12},
+    { ticker: 'AMZN', delta: 10},
+    { ticker: 'TSLA', delta: 5},
+
+  ]
   ngOnInit(): void {
   }
 
