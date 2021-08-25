@@ -1,4 +1,4 @@
-def projectName = 'citi_portfolio_manager'
+def projectName = 'citi-portfolio-manager'
 def version = "0.0.${currentBuild.number}"
 def dockerImageTag = "${projectName}:${version}"
 
@@ -18,7 +18,7 @@ pipeline {
            //MYSQL_CREDS = credentials('MySQLCreds')
           }
       steps {
-        sh "oc login -u ${OPENSHIFT_CREDS_USR} -u ${OPENSHIFT_CREDS_PSW}"
+        sh "oc login -u admin -p admin --insecure-skip-tls-verify=true"
         sh "oc project ${projectName} || oc new-project ${projectName}"
         sh "oc delete all --selector app=${projectName} || echo 'Unable to delete all previous openshift resources'"
         sh "oc new-app ${dockerImageTag} -l version=${version}"
