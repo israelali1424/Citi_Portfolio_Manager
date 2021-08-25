@@ -25,6 +25,18 @@ public class StockServiceImpl implements StockService {
         stock.setId(0); // assume it is not in the db
         return stockRepository.save(stock);
     }
+    @Override
+    public void deleteStockBySymbol(String symbol) {
+        stockRepository.deleteBySymbol(symbol);
+        /*
+        Iterable<Stock> stockOptional = stockRepository.findBySymbol(symbol);
+        Stock s = stockOptional.iterator().next();
+        if (s!= null){
+            stockRepository.delete(s);
+        }
+
+         */
+    }
 
     @Override
     public Stock getStockBySymbol(String symbol) {

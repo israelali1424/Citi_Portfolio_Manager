@@ -26,8 +26,14 @@ public class StockController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void addCd(@RequestBody Stock stock) {
+    public void addStock(@RequestBody Stock stock) {
         stockService.addNewStock(stock);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{symbol}")
+
+    public void deleteStockBySymbol(@PathVariable("symbol") String symbol) {
+        stockService.deleteStockBySymbol(symbol);
     }
 
 }

@@ -4,6 +4,7 @@ import java.util.Collection;
 public interface StockService {
     Collection<Stock> getAllStocks();
     Stock addNewStock(Stock stock);
+    void deleteStockBySymbol(String symbol);
     Stock getStockBySymbol(String symbol);
 
 }
