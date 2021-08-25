@@ -10,7 +10,8 @@ import { NetWorthComponent } from './net-worth/net-worth.component';
 import { AssetViewComponent } from './net-worth/asset-view/asset-view.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SwapiComponent } from './swapi/swapi.component'
+import { SwapiComponent } from './swapi/swapi.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { SwapiComponent } from './swapi/swapi.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule, // the FormsModule is needed for forms
-    HttpClientModule
+    HttpClientModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

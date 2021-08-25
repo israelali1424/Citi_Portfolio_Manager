@@ -10,13 +10,13 @@ export class AssetViewComponent implements OnInit {
   // declare data-models for this component
   // if we intend to inject values, the data-model MUST be an @Input
   @Input() price:number = 0
-  @Input() code:string = ''
+  @Input() symbol:string = ''
   @Input() index?:number // ? means it might not exist
   count:number = 0
   // declare a custom event for this component
   @Output() sortie:EventEmitter<number> = new EventEmitter()
   @Output() sellEvent:EventEmitter<number> = new EventEmitter()
-  @Output() codeChangeEvent:EventEmitter<object> = new EventEmitter()
+  @Output() symbolChangeEvent:EventEmitter<object> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -42,7 +42,7 @@ export class AssetViewComponent implements OnInit {
     this.sortie.emit(delta)
     this.count = 0
   }
-  codeChangeHandler(){
-    this.codeChangeEvent.emit({code:this.code, index:this.index})
+  symbolChangeHandler(){
+    this.symbolChangeEvent.emit({symbol:this.symbol, index:this.index})
   }
 }
