@@ -15,4 +15,16 @@
   <!-- <pre>{{reportData |json}}</pre> -->
   <!-- ternary operator logic expression ? value if true: value if false -->
   <p>{{reportData.name ? reportData.name:reportData.id}}</p>
-</section>
+
+  <div>
+    <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="data"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true">
+    </div>
+  </section>
+  <!-- (chartClick)="onChartClick($event)"> -->
+  <!-- [colors]="colors"> -->

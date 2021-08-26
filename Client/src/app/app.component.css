@@ -2,3 +2,15 @@ article{
     color: white;
    
 }
+
+.componentContainer{
+    border:thick solid red;
+    height: 100vh;
+    display: flex;
+}
+
+.indComponent{
+    border: thick solid yellow;
+    display: flex;
+    width:33%
+}

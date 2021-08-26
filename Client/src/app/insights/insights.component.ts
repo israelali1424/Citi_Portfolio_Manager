@@ -15,7 +15,8 @@ export class InsightsComponent implements OnInit {
   paramObj = {category:'user', id:1}
   // we need access to the service
   constructor(private typicodeService:TypicodeService) { }
-
+  data:any;
+  
   ngOnInit(): void {
   }
   makeServiceCall(){
