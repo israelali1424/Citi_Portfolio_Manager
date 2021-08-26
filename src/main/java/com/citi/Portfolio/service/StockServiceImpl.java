@@ -31,7 +31,7 @@ public class StockServiceImpl implements StockService {
     @Override
     public void updateStock(String symbol,String type, int amount){
         Stock temp = getStockBySymbol(symbol);
-        if (type.equals("buy")) {
+        if (type.toLowerCase().equals("buy")) {
             temp.setVolume(temp.getVolume() + amount);
             stockRepository.save(temp);
         } else if (type.toLowerCase().equals("sell")) {
