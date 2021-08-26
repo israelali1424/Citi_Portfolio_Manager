@@ -29,11 +29,12 @@
   <!-- here is where routed content will appear it is mutually exclusive content-->
 
 <button (click)="getData()">Get Data</button>
+<button (click)="randomColor()">Get Color</button>
 
   <div class="componentContainer">
     <app-net-worth class="indComponent" [dataa]="data"></app-net-worth>
     <app-market-movers class="indComponent"></app-market-movers>
-    <app-insights [dataa]="data" class="indComponent"></app-insights>
+    <app-insights [data]="data" class="indComponent"></app-insights>
     <!-- <router-outlet></router-outlet> -->
   </div>
 </article>
