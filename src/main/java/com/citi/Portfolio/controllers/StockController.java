@@ -30,6 +30,10 @@ public class StockController {
         stockService.addNewStock(stock);
     }
 
+    @RequestMapping(method = RequestMethod.PUT)
+    public void updateStockVolume(@RequestBody String symbol,String type, Integer amount) {
+        stockService.updateStock(symbol,type,amount);
+    }
     @RequestMapping(method = RequestMethod.DELETE, value = "/{symbol}")
     public void deleteS(@PathVariable("symbol") String symbol) {
         stockService.deleteStockBySymbol(symbol);

@@ -1,0 +1,9 @@
+PUT http://localhost:8080/stocks
+Content-type: application/json
+
+{
+  "symbol" : "DIS",
+  "type" : "buy",
+  "amount" :12
+
+}
