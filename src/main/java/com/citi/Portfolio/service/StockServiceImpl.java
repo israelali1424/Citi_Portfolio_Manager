@@ -28,11 +28,15 @@ public class StockServiceImpl implements StockService {
         stock.setId(0); // assume it is not in the db
         return stockRepository.save(stock);
     }
+
     @Override
-    public void updateStock(String symbol,String type, int amount){
-        Stock temp = getStockBySymbol(symbol);
+    public void updateStock(String symbol,String type, Integer amount){
+        Stock temp = stockRepository.findBySymbol(symbol).iterator().next();
+
+        /*
         if (type.toLowerCase().equals("buy")) {
             temp.setVolume(temp.getVolume() + amount);
+            temp.setSymbol("WWWW");
             stockRepository.save(temp);
         } else if (type.toLowerCase().equals("sell")) {
             temp.setVolume(temp.getVolume() - amount);
@@ -42,6 +46,8 @@ public class StockServiceImpl implements StockService {
             }
             stockRepository.save(temp);
         }
+        */
+
 
     }
 
