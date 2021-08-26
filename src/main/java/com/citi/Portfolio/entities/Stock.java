@@ -5,6 +5,7 @@ import java.io.Serializable;
 @Entity
 @Table(name="stocks")
 public class Stock {
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -18,6 +19,9 @@ public class Stock {
 
     @Column(name="price")
     private Double price;
+
+
+
 
     public Integer getId() {
         return id;

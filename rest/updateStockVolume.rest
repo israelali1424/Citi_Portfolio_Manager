@@ -1,0 +1,2 @@
+GET http://localhost:8080/stocks/update/DIS
+Content-type: application/json

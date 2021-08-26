@@ -7,4 +7,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface StockRepository extends JpaRepository<Stock, Integer> {
     public Iterable<Stock> findBySymbol( String symbol);
+
 }
