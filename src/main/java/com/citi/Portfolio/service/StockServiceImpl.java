@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Collection;
 
@@ -26,21 +29,34 @@ public class StockServiceImpl implements StockService {
         return stockRepository.save(stock);
     }
     @Override
-    public void deleteStockBySymbol(String symbol) {
-        stockRepository.deleteBySymbol(symbol);
-        /*
-        Iterable<Stock> stockOptional = stockRepository.findBySymbol(symbol);
-        Stock s = stockOptional.iterator().next();
-        if (s!= null){
-            stockRepository.delete(s);
+    public void updateStock(String stockSymbol,String type, int amount){
+        Stock temp = getStockBySymbol(stockSymbol);
+        if (type.toLowerCase().equals("buy")) {
+            temp.setVolume(temp.getVolume() + amount);
+            stockRepository.save(temp);
+        } else if (type.toLowerCase().equals("sell")) {
+            temp.setVolume(temp.getVolume() - amount);
+            if (temp.getVolume()<0){
+                temp.setVolume(0);
+            }
+            stockRepository.save(temp);
         }
 
-         */
     }
 
     @Override
-    public Stock getStockBySymbol(String symbol) {
+	public void deleteStockBySymbol(String symbol) {
+		Stock toBeDeleted = stockRepository.findBySymbol(symbol).iterator().next();
+        deleteStock(toBeDeleted);
+	}
 
+	@Override
+	public void deleteStock(Stock stock) {
+		stockRepository.delete(stock);
+	}
+
+    @Override
+    public Stock getStockBySymbol(String symbol) {
         Iterable<Stock> StockOptional =  stockRepository.findBySymbol(symbol);
            return   StockOptional.iterator().next();
 

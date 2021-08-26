@@ -31,10 +31,10 @@ public class StockController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{symbol}")
-
-    public void deleteStockBySymbol(@PathVariable("symbol") String symbol) {
+    public void deleteS(@PathVariable("symbol") String symbol) {
         stockService.deleteStockBySymbol(symbol);
     }
+
 
 }
 

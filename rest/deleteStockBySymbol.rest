@@ -1,2 +1,2 @@
 DELETE http://localhost:8080/stocks/WMT
-Content-type: application/json
+Content-type: application/json2
