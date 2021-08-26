@@ -33,7 +33,7 @@ public class StockController {
     public void addStock(@RequestBody Stock stock) {
         stockService.addNewStock(stock);
     }
-
+/*
     @PutMapping("/update/{symbol}")
     public void updateVolume(
     @PathVariable String symbol,
@@ -41,26 +41,25 @@ public class StockController {
         Stock temp = new Stock();
 
         stockRepository.save()
-
-
-    }
-/*
-    @RequestMapping(method = RequestMethod.PUT)
-    public void updateStockVolume(@RequestBody String symbol,String type, Integer amount) {
-        System.out.println(amount);
-        if (amount != null) {
-
-            stockService.updateStock(symbol, type, (int)amount);
         }
+*/
+
+    @RequestMapping(method = RequestMethod.PUT)
+    public void updateStockVolume(@RequestBody Object[] o) {
+      //  System.out.println(amount);
+            stockService.updateStock((String)o[0],(Integer)o[1]);
+
     }
+
+
+/*
 
     @RequestMapping(method = RequestMethod.PUT, value = "/{update}")
     public void update(@PathVariable("symbol") String symbol) {
-    //public void updateStock(@PathVariable("amount") Integer amount) {
-        stockService.updateStock(symbol, "buy", 12);
+        stockService.updateStock(symbol);
 
     }
-    */
+*/
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/{symbol}")
     public void deleteS(@PathVariable("symbol") String symbol) {

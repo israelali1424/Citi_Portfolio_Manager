@@ -7,6 +7,6 @@ public interface StockService {
     void deleteStockBySymbol(String symbol);
     void deleteStock(Stock stock);
     Stock getStockBySymbol(String symbol);
-    void updateStock(String stockSymbol,String type, Integer amount);
+    Stock updateStock(String stockSymbol,Integer amount);
 
 }

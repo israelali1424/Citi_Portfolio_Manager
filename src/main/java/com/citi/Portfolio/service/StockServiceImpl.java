@@ -30,24 +30,13 @@ public class StockServiceImpl implements StockService {
     }
 
     @Override
-    public void updateStock(String symbol,String type, Integer amount){
+    public Stock updateStock(String symbol, Integer amount){
+
+
+
         Stock temp = stockRepository.findBySymbol(symbol).iterator().next();
-
-        /*
-        if (type.toLowerCase().equals("buy")) {
-            temp.setVolume(temp.getVolume() + amount);
-            temp.setSymbol("WWWW");
-            stockRepository.save(temp);
-        } else if (type.toLowerCase().equals("sell")) {
-            temp.setVolume(temp.getVolume() - amount);
-            // if the user sells more share than they own.
-            if (temp.getVolume()<0){
-                temp.setVolume(0);
-            }
-            stockRepository.save(temp);
-        }
-        */
-
+        temp.setVolume(temp.getVolume() + amount);
+        return stockRepository.save(temp);
 
     }
 
