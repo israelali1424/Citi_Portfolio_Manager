@@ -1,10 +1,7 @@
 <section>
     <div class="sectionTitle">
-        <h1>Net Worth {{total |currency:'$'}}</h1>
+        <h1>Net Worth: {{total |currency:'$'}}</h1>
     </div>
-    <aside>
-        <h4>Current Stock Codes: <span *ngFor='let item of dataa'>{{item.symbol}}  </span></h4>
-    </aside>
   <app-asset-view
     *ngFor="let item of dataa; let i=index"
     [symbol]='item.symbol'

@@ -1,20 +1,48 @@
 <section>
+    <br/>
+    <br/>
     <div class="sectionTitle">
-        <h1>
-            Gainers and Losers
-        </h1>
+        <h1 [ngStyle]='{"fontSize":"30px"}'>Stock Deltas</h1>
     </div>
-    <h4>
-            Your Gainers 
-        </h4>
-    <ul>
-    <li *ngFor='let stock of changedStocks' id="winners">{{stock.ticker}} {{stock.delta}} </li>
-  </ul>
-   <h4>
-            Your Losers
-        </h4>
+    <div class="tableContainer">
+        <table id="winners">
+            <thead>
+              <tr>
+                  <th>Gainers</th>
+                  <th>% Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stock of changedStocks">
+                      <td>{{stock.ticker}}</td>
+                      <td>{{stock.delta}}</td>
+              </tr>
+            </tbody>
+        </table>
+        <table id="losers">
+            <thead>
+              <tr>
+                  <th>Losers</th>
+                  <th>% Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let ticker of LoserStocks">
+                      <td>{{ticker.ticker}}</td>
+                      <td>{{ticker.delta}}</td>
+              </tr>
+            </tbody>
+        </table>
+        <!-- <span>Your Gainers</span>
         <ul>
-    <li *ngFor='let stock of LoserStocks' id='losers'>{{stock.ticker}} {{stock.delta}}</li>
-  </ul>
+            <li *ngFor='let stock of changedStocks' id="winners">{{stock.ticker}} {{stock.delta}} </li>
+        </ul>
+        <span>
+            Your Losers
+        </span>
+        <ul>
+            <li *ngFor='let stock of LoserStocks' id='losers'>{{stock.ticker}} {{stock.delta}}</li>
+        </ul> -->
+    </div>
         
 </section>

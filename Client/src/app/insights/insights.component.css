@@ -56,4 +56,9 @@
 
 .sectionTitle{
     margin-top: -3%;
+    text-align: center;
+}
+.sectionTitle>h1{
+    font-size:30px;
+    margin-top:20px
 }

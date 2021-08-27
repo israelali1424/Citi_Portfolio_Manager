@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NetWorthComponent implements OnInit {
 
   // declare model data for this component
-  total = 0
+  total = 20312.21
   codes = [
     {code:'AMZN', price:42}, // member zero
     {code:'NFLX', price:12}, // member 1

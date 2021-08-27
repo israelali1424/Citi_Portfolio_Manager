@@ -1,5 +1,8 @@
 article{
     color: white;
+    background-color: rgb(18, 18, 73);
+
+
    
 }
 
@@ -15,7 +18,7 @@ article{
 }
 
 .indComponent{
-    border: thin solid black;
+    /* border: thin solid black; */
     flex-grow:1;
   
     color: white;

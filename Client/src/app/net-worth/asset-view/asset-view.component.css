@@ -27,4 +27,8 @@ aside{
 button{
   height: fit-content;
 }
-input {width: 42px;}
+input {width: 50px;}
+
+button{
+    border-radius: 8px;
+    padding: 5px}

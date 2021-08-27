@@ -5,3 +5,22 @@
 #losers{
     color:#B81D13;
 }
+
+.tableContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sectionTitle{
+    text-align: center;
+}
+
+table{
+    font-size: xx-large;
+    height: 50%;
+}
+table>tbody>tr>td{
+    padding: 10%;
+}
+table>thead>tr>th{
+    padding: 0 15px;
+}

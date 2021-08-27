@@ -22,11 +22,12 @@
 
   <!-- <p>symbol {{symbol}} Price {{price |currency:'C$'}} Count {{count}} Index {{index}} </p>
   <p>Price*Count is {{price * count |currency:'C$'}}</p> -->
-  <button (click)='buyStock()'>Buy</button>
-  <!-- *ngIf will decide if the tag gets rendered or not -->
-  <!-- <button *ngIf='count>0' (click)='sellStock()'>Sell</button> -->
-  <!-- [hidden]  AWLAYS renders, but css-display can be 'none' -->
-  <!-- in some cases it makes sense to disable a button -->
-  <button [disabled]='!count' (click)='sellStock()'>Sell</button>
-  <button [disabled]='!count' (click)='resetStock()'>Sell All</button>
+  <div>
+    <button (click)='buyStock()'>Buy</button>
+    <button [disabled]='!count' (click)='sellStock()'>Sell</button>
+    <div>
+        <button [disabled]='!count' (click)='resetStock()'>Sell All</button>
+    </div>
+
+  </div>
 </aside>
