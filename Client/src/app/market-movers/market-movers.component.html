@@ -1,8 +1,10 @@
-<section  [ngStyle]="{backgroundColor:'#253669', color: 'white', outline: 'none', boxShadow: 'none', border: 'none', margin: '-8px'}">
-  <h1>Gainers and Losers</h1>
-  <!-- we can iterate over a collection such as an array -->
-  <ul>
-    <!-- *ngFor is sugar syntax for *ngForOf -->
+<section>
+    <div class="sectionTitle">
+        <h1>
+            Gainers and Losers
+        </h1>
+    </div>
+    <ul>
     <li *ngFor='let stock of changedStocks'>{{stock.ticker}} {{stock.delta}}</li>
   </ul>
 </section>

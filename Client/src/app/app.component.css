@@ -4,13 +4,23 @@ article{
 }
 
 .componentContainer{
-    border:thick solid red;
+    /* border:thick solid red; */
     height: 100vh;
     display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    
 }
 
 .indComponent{
-    border: thick solid yellow;
-    display: flex;
-    width:33%
+    border: thin solid black;
+    flex-grow:1;
+  
+    background-color:#253669;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    padding: 20px;
+    /* margin: -8px */
 }
+
