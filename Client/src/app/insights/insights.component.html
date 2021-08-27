@@ -1,19 +1,22 @@
-  <div class="grafico">
+  <section>
+      <div class="sectionTitle">
+          <h1>Current Stock Prices</h1>  
+      </div>
+    <div class="grafico">
     <div class="content">
-        <div class="bars" *ngFor="let item of data">
+        <div class="bars" *ngFor="let item of values">
             <span>{{item.price}}</span>
-            <span>{{item.id}}</span>
             <span>{{item.size}}</span>
-            <span>{{item.symbol}}</span>
             
-            <div class="bar" [style.background-color]=this.randomColor() [ngStyle]="{height:'100px'}"></div>
+            <div class="bar" [style.background-color]=item.color [style.height]=item.size></div>
         </div>
     </div>
     <div class="line"></div>
     <div class="legends">
-        <span *ngFor="let item of data">{{item.symbol}}</span>
+        <span *ngFor="let item of values"><b>{{item.symbol}}</b></span>
     </div>
-
+    
     <button (click)="showSizes()">sizes</button>
 </div>
+</section>
   

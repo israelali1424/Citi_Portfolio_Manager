@@ -8,7 +8,7 @@
 .grafico .content span{
     font-family: 'Roboto';
     font-size: 13px;
-    color: #707070;
+    color: white;
 }
 
 .grafico .line{
@@ -22,9 +22,9 @@
 .grafico .legends{
     display: flex;
     flex-direction: row;
-    color: #707070;
+    color: white;
     font-family: 'Roboto';
-    font-size: 12px;
+    font-size: 20px;
     text-align: center;
 }
 

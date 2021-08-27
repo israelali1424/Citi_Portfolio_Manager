@@ -1,40 +1,8 @@
 <article>
- 
   <h2>Citi Portfolio Manager</h2>
-   <nav>
-    <!-- links go here -->
-    <a routerLink='/cash-flow'>Cash Flow</a> |
-    <a routerLink='/market-movers'>Market Movers</a> |
-    <a routerLink='/net-worth'>Net Worth</a> |
-    <a routerLink='/insights'>Insights</a> |
-    <a routerLink='/swapi'>Swapi</a> 
-  </nav>
-  <!-- <ng-container *ngIf='askCookieConsent'>
-    <p>This site uses cookies, is that ok?</p>
-    <button  (click)='agreeCookie()' >Agree</button>
-  </ng-container> -->
-  <!-- the <form> tag becomes and NgForm because of the FormsModule -->
-  <!-- <form>
-     here is two-way binding using [()] 
-    <input placeholder='Facebook image' required [(ngModel)]='fbImage' name='fbImage'/>
-    <br/>
-    <img src='https://graph.facebook.com/{{fbImage}}/picture?type=normal'>
-  </form> -->
-
-  <!-- or... -->
-  <!-- Turns out we don't even need a <form> tag! -->
-    <!-- <input placeholder='Facebook image' required [(ngModel)]='fbImage' />
-    <br/>
-    <img src='https://graph.facebook.com/{{fbImage}}/picture?type=normal'> -->
-  <!-- here is where routed content will appear it is mutually exclusive content-->
-
-<button (click)="getData()">Get Data</button>
-<button (click)="randomColor()">Get Color</button>
-
   <div class="componentContainer">
     <app-net-worth class="indComponent" [dataa]="data"></app-net-worth>
     <app-market-movers class="indComponent"></app-market-movers>
     <app-insights [data]="data" class="indComponent"></app-insights>
-    <!-- <router-outlet></router-outlet> -->
   </div>
 </article>
