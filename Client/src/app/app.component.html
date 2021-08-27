@@ -1,8 +1,13 @@
 <article>
-  <h2>Citi Portfolio Manager</h2>
+    <div class="header">
+        <h1 [ngStyle]="{'float':'left', 'paddingLeft':'10px'}">Citi Portfolio Manager</h1>
+        <img [ngStyle]="{'float':'right', 'paddingRight':'40px'}"src="../assets/Group 13.png">
+    </div>
   <div class="componentContainer">
     <app-net-worth class="indComponent" [dataa]="data"></app-net-worth>
-    <app-market-movers class="indComponent"></app-market-movers>
-    <app-insights [data]="data" class="indComponent"></app-insights>
+    <section>
+        <app-insights [data]="data" class="indComponent"></app-insights>
+        <app-market-movers class=""></app-market-movers>
+    </section>
   </div>
 </article>
