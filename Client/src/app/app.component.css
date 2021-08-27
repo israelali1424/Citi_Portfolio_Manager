@@ -9,6 +9,8 @@ article{
     display: flex;
     width: 100vw;
     justify-content: space-between;
+
+    background-color:#253669;
     
 }
 
@@ -16,11 +18,14 @@ article{
     border: thin solid black;
     flex-grow:1;
   
-    background-color:#253669;
     color: white;
     outline: none;
     box-shadow: none;
-    padding: 20px;
+    /* padding: 20px; */
     /* margin: -8px */
 }
 
+.header {
+    width: 100vw;
+    display: inline-block
+}

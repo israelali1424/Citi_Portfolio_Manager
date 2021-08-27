@@ -17,6 +17,9 @@ export class InsightsComponent implements OnInit {
         {id: 3, symbol: "DIS", volume: 1038, price: 142.34, color: 'rgb(166, 240, 20)'},
         {id: 7, symbol: "WMT", volume: 70, price: 149.54, color: 'rgb(17, 242, 126)'},
         {id: 7, symbol: "GOOG", volume: 12, price: 2842.46, color: 'rgb(161, 43, 19)'},
+        {id: 7, symbol: "HOOD", volume: 12, price: 1487.12, color: 'rgb(161, 43, 19)'},
+        {id: 7, symbol: "GOOG", volume: 12, price: 1000.46, color: 'rgb(161, 43, 19)'},
+        {id: 7, symbol: "GOOG", volume: 12, price: 2212.46, color: 'rgb(161, 43, 19)'},
 ]
 
     public maxHeight= 160;
