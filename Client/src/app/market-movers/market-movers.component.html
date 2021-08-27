@@ -4,7 +4,17 @@
             Gainers and Losers
         </h1>
     </div>
+    <h4>
+            Your Gainers 
+        </h4>
     <ul>
-    <li *ngFor='let stock of changedStocks'>{{stock.ticker}} {{stock.delta}}</li>
+    <li *ngFor='let stock of changedStocks' id="winners">{{stock.ticker}} {{stock.delta}} </li>
   </ul>
+   <h4>
+            Your Losers
+        </h4>
+        <ul>
+    <li *ngFor='let stock of LoserStocks' id='losers'>{{stock.ticker}} {{stock.delta}}</li>
+  </ul>
+        
 </section>
